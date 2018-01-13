@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html><html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="StyleSheet" type="text/css" href="form.css"/>
+</head><body>
+		<form method="post" action="">
+		<label class="HangMoi">Họ tên:</label>
+		<input type="text" id="hoten" name="hoten" class="TruongBatbuoc"
+				onkeyup="javascript:DoKeyup(event, this, 'diachi');" 
+				onblur="javascript: this.value = ChuanhoaTen(this.value);"/>  
+		<span id="loi_hoten" class="Baoloi" ></span>
+		<br/>
+			
+		<label class="HangMoi">Địa chỉ:</label>
+		<input type="text" id="diachi" name="diachi" 
+			onkeyup="javascript:DoKeyup(event, this, 'nam');"/> 		      
+		<br/>
+		
+		<label class="HangMoi">Giới tính:</label>
+		<input type="radio" id="nam" name="gioitinh" checked="checked"
+			onkeyup="javascript:DoKeyup(event, this, 'nu');"/> Nam		
+		<input type="radio" id="nu" name="gioitinh" 
+			onkeyup="javascript:DoKeyup(event, this, 'ngaysinh');"/>	Nữ							
+		<br/>
+		
+		<label class="HangMoi">Ngày sinh:</label>
+		<input type="text" id="ngaysinh" name="ngaysinh" 
+		    value = "nn/tt/nnnn"
+		    class="TruongBatbuoc hint" 
+			onkeyup="javascript:DoKeyup(event, this, 'email');"
+			onfocus="javascript:dobFocus();"
+			onblur="javascript:dobBlur();"/>					
+		<span id="loi_ngaysinh" class="Baoloi" ></span>
+		<br/>
+	
+		<label class="HangMoi">E-mail:</label>
+		<input type="text" id="email" name="email" class="TruongBatbuoc"
+			onkeyup="javascript:DoKeyup(event, this, 'codinh');"/>    			
+		<span id="loi_email" class="Baoloi" ></span>
+		<br/>
+		
+		<label class="HangMoi">Điện thoại:</label>
+		<input type="text" id="codinh" name="codinh"
+			onkeyup="javascript:DoKeyup(event, this, 'english');"/> 	
+		<br/>
+		
+		<label class="HangMoi">Khóa đăng ký:</label>
+		<input type="checkbox" id="english" name="english" 
+			onkeyup="javascript:DoKeyup(event, this, 'quantri');"/> Tiếng Anh
+		<input type="checkbox" id="quantri" name="quantri" 
+			onkeyup="javascript:DoKeyup(event, this, 'it');"/> Quản trị 			
+		<input type="checkbox" id="it" name="it" 
+			onkeyup="javascript:DoKeyup(event, this, 'username');"/> CNTT
+		<br/>	
+		
+		<label class="HangMoi">Tên sử dụng:</label>
+		<input type="text" id="username" name="username" class="TruongBatbuoc" 
+			onkeyup="javascript:DoKeyup(event, this, 'pass');"/>				
+		<span id="loi_username" class="Baoloi" ></span>
+		<br/>
+
+		<label class="HangMoi">Mật khẩu:</label>
+		<input type="password" id="pass" name="pass" class="TruongBatbuoc" 
+			onkeyup="javascript:DoKeyup(event, this, 'repass');"/>				
+		<span id="loi_pass" class="Baoloi"></span>
+		<br/>
+		
+		<label class="HangMoi">Gõ lại mật khẩu:</label>
+		<input type="password" id="repass" name="repass" class="TruongBatbuoc" 
+			onkeyup="javascript:DoKeyup(event, this, 'ghichu');"/>				
+		<span id="loi_repass" class="Baoloi" ></span>
+		<br/><br/>
+		
+		<label class="HangMoi">Ghi chú:</label>
+		<textarea id="ghichu" name="ghichu"></textarea>
+		<br/>
+			
+		<label class="HangMoi">&nbsp;</label>	
+		<input type="button" value="Chấp nhận" onclick="javascript:Chapnhan();" />
+		<input type="button" value="Bỏ qua" onclick = "javascript:Boqua();" />
+		<br/>
+		</form>
+		<script type="text/javascript">
+			document.getElementById("hoten").focus();
+		</script>
+		<script type="text/javascript" src="form.js"></script>
+</body></html>
